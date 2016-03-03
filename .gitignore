@@ -1,1 +1,7 @@
 coursera_submit.py
+
+*.pyc
+*.pyo
+*.py~
+
+*.db
