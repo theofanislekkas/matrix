@@ -7,35 +7,35 @@ coursera = 1
 
 
 ## 1: (Task 1) Minutes in a Week
-minutes_in_week = ...
+minutes_in_week = 60 * 24 * 7
 
 
 
 ## 2: (Task 2) Remainder
 #For this task, your expression must use //
-remainder_without_mod = ...
+remainder_without_mod = 2304811 % 47
 
 
 
 ## 3: (Task 3) Divisibility
-divisible_by_3 = ...
+divisible_by_3 = (673 + 909) % 3 == 0
 
 
 
 ## 4: (Task 4) Conditional Expression
 x = -9
 y = 1/2
-expression_val = ...
+expression_val = 2**(y+1/2) if x+10<0 else 2**(y-1/2)
 
 
 
 ## 5: (Task 5) Squares Set Comprehension
-first_five_squares = { ... for _ in {1,2,3,4,5} }
+first_five_squares = { _**2 for _ in {1,2,3,4,5} }
 
 
 
 ## 6: (Task 6) Powers-of-2 Set Comprehension
-first_five_pows_two = { ... for _ in {0,1,2,3,4} }
+first_five_pows_two = { 2**_ for _ in {0,1,2,3,4} }
 
 
 
@@ -43,8 +43,8 @@ first_five_pows_two = { ... for _ in {0,1,2,3,4} }
 # Assign three-element sets to X1 and Y1 so that
 # {x*y for x in X1 for y in Y1} evaluates to a nine-element set.
 
-X1 = { ..., ..., ... }
-Y1 = { ..., ..., ... }
+X1 = { 1, 2, 3 }
+Y1 = { 5, 6, 7 }
 
 
 
