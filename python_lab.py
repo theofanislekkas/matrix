@@ -152,19 +152,9 @@ value_list = [i[k] for i in dlist]
 dlist = [{'Bilbo':'Ian','Frodo':'Elijah'},{'Bilbo':'Martin','Thorin':'Richard'}]
 k = 'Bilbo'
 #Replace [...] with a one-line comprehension 
-value_list_modified_1 = [...] # <-- Use the same expression here
+value_list_modified_1 = [i[k] if k in i else 'Not Present' for i in dlist] # <-- Use the same expression here
 k = 'Frodo'
-value_list_modified_2 = [...] # <-- as you do here
-"""
-Current implementation
-for i in dlist:
-     for key in i:
-         if key == k:
-             print(i[k])
-else:
-    print('NP')     
-
-"""
+value_list_modified_2 = [i[k] if k in i else 'Not Present' for i in dlist] # <-- as you do here
 
 
 
@@ -177,7 +167,7 @@ square_dict = {...}
 ## 23: (Task 23) Making the identity function
 D = {'red','white','blue'}
 # Replace {...} with a one-line dictionary comprehension
-identity_dict = {...}
+identity_dict = {k:v for (k,v) in zip(D,D)}
 
 
 
