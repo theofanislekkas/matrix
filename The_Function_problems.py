@@ -22,7 +22,11 @@ def tuple_sum(A, B):
     >>> tuple_sum([(0,1),(-1,0),(2,2)], [(3,4),(5,6),(7,8)])
     [(3, 5), (4, 6), (9, 10)]
     '''
-    pass
+    holder = []
+
+    for i,j in zip(A, B):
+        holder.append((i[0] + j[0], i[1] + j[1]))
+    return holder
 
 
 
@@ -37,7 +41,8 @@ def inv_dict(d):
     Example:
     >>> inv_dict({'goodbye':  'au revoir', 'thank you': 'merci'}) == {'merci':'thank you', 'au revoir':'goodbye'}
     '''
-    pass
+    new_dict = {v:k for (k,v) in d.items()}
+    return new_dict
 
 
 
@@ -53,11 +58,20 @@ def row(p, n):
     >>> row(10,4)
     [10, 11, 12, 13]
     '''
-    pass
+    holder = []
+    holder.append(p)
+    counter = 1
 
-comprehension_with_row = ...
+    while counter < n:
+        new = p + counter
+        holder.append(new)
+        counter += 1
+    return holder
 
-comprehension_without_row = ...
+comprehension_with_row = [row(i,20) for i in range(15)]
+
+comprehension_without_row = [[i for i in range(20)] for i in range(15)]
+#Doesn't increment the nested lists.
 
 
 
